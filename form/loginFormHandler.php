@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if the provided password matches the stored password
         if (password_verify($password, $user['password'])) {
             // echo "Login successful. Welcome, " . $user['name'];
+            setcookie("username", $username, time() + 86400, "/");
             header('Location: ../home.php');
         } else {
             header('Location: ./loginForm.php');

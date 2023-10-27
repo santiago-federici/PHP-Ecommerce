@@ -8,7 +8,6 @@ const errorsContainer = document.querySelector('.errors-container')
 loginForm.addEventListener('submit', (e) => {
     let errors = []
     
-
     if(username.value === ''){
         errors.push('Username cannot be empty')
     }

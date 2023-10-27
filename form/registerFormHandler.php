@@ -24,6 +24,7 @@
             $query = "INSERT INTO users (name, password, register_date) VALUES ('$username', '$hashedPassword', '$register_date')";
             $result = mysqli_query($connection, $query);
             if ($result) {
+                setcookie("username", $username, time() + 86400, "/");
                 header('Location: ../home.php');
             } else {
                 header('Location: ./form.php');

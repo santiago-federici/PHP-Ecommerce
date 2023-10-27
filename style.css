@@ -169,13 +169,20 @@ a:focus {
 
 .page-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
     box-shadow: 0 0 1rem 1px rgba(0 0 0 / .5);
 }
 
-.page-header>img {
+.header-wrapper{
+    width: min(100% - 5rem, 120ch);
+    margin-inline: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-wrapper>img {
     width: 70px;
     aspect-ratio: 1;
     mix-blend-mode: color-burn;
@@ -208,4 +215,45 @@ a:focus {
 
 .header-nav>a:hover::after {
     width: 100%;
+}
+
+.user-container{
+    position: relative;
+}
+
+.user-container > label{
+    cursor: pointer;
+    position: relative;
+}
+
+.options-container{
+    display: none;
+}
+
+.options-container > ul{
+    list-style-type: none;
+}
+
+.option-item:hover{
+    cursor: pointer;
+    background: hsl(0, 0%, 80%);
+}
+
+.options-container{
+    background: var(--clr-surface);
+}
+
+.user-container > input:checked ~ .options-container {
+    display: grid;
+    position: absolute;
+    bottom: -9rem;
+    left: -5rem;
+    background: var(--clr-surface);
+    box-shadow: 0 0 10px 0 rgba(0 0 0 / .5);
+    border-radius: 10px;
+    gap: .5rem;
+    padding: 1rem;
+    text-wrap: nowrap;
+    width: fit-content;
+    height: fit-content;
 }

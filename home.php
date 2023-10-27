@@ -10,37 +10,63 @@
 </head>
 
 <body>
-    <header class='page-header'>
-        <img class='logo'
-            src="https://imgs.search.brave.com/Y2amAtUn2KuQmNcdLCmoFPg0LbYsgFBghjPg97Fv5Lg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9sb2dv/LmNvbS9pbWFnZS1j/ZG4vaW1hZ2VzL2t0/czkyOHBkL3Byb2R1/Y3Rpb24vMDA4OWI3/YWUxZWQzOTRmMDQx/YzVmNzkyOWUxMTFj/MTFlOGVhZmU0ZC00/MjR4NDIxLnBuZz93/PTEwODAmcT03Mg"
-            alt="Logo">
+  <header class='page-header'>
+    <div class='header-wrapper'>
+      <img class='logo'
+        src="https://imgs.search.brave.com/Y2amAtUn2KuQmNcdLCmoFPg0LbYsgFBghjPg97Fv5Lg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9sb2dv/LmNvbS9pbWFnZS1j/ZG4vaW1hZ2VzL2t0/czkyOHBkL3Byb2R1/Y3Rpb24vMDA4OWI3/YWUxZWQzOTRmMDQx/YzVmNzkyOWUxMTFj/MTFlOGVhZmU0ZC00/MjR4NDIxLnBuZz93/PTEwODAmcT03Mg"
+        alt="Logo">
 
-        <nav class='header-nav'>
-                <a href="/webPage/">
-                        Home
-                </a>
-                <a href="./products.php">
-                        Products
-                </a>
-                <a href="">
-                        About
-                </a>
-        </nav>
+      <nav class='header-nav'>
+        <a href="./home.php">
+          Home
+        </a>
+        <a href="./products.php">
+          Products
+        </a>
+        <a href="">
+          About
+        </a>
+      </nav>
+      <div class="form-btns-container">
+        <a href="./form/loginForm.php"><button class='secondary-btn'>Login</button></a>
+        <a href="./form/registerForm.php"><button class='primary-btn'>Register</button></a>
+      </div>
 
-        <div class="register-btns">
-            <a href="./form/loginForm.php"><button class='secondary-btn'>Login</button></a>
-            <a href="./form/registerForm.php"><button class='primary-btn'>Register</button></a>
+      <div class='user-container'>
+
+        <label for='user-options'>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-square-rounded" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z"></path>
+            <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"></path>
+            <path d="M6 20.05v-.05a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v.05"></path>
+          </svg>
+        </label>
+
+        <input type="checkbox" hidden id='user-options'>
+
+        <div class='options-container'>
+          <h3>Username</h3>
+          <ul>
+            <li>Your account</li>
+            <li>History</li>
+            <li>Logout</li>
+          </ul>
         </div>
-    </header>
+      </div>
+
+    </div>
+  </header>
 
   <main class="wrapper">
-    <section class='hero-section'>
-        <div class='hero-info'>
-            <h1>ECOMMERCE</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet perferendis animi natus fugiat aliquid quo obcaecati dolore, ut, architecto, sit maxime fuga rerum corporis ea!</p>
-        </div>
 
-        <img 
+    <section class='hero-section'>
+      <div class='hero-info'>
+        <h1>ECOMMERCE</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet perferendis animi natus fugiat aliquid quo obcaecati dolore, ut, architecto, sit maxime fuga rerum corporis ea!</p>
+      </div>
+
+      <img 
         src="./images/computer.jpeg" 
         alt=""
         class='hero-img'>
@@ -146,4 +172,5 @@
     </footer>
 </body>
 
+<script src="./cookieUserValidation.js"></script>
 </html>
